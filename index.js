@@ -1,10 +1,29 @@
-function downloadInstaller(fileName, downloaded) {
-  const link = document.createElement('a');
-  link.href = fileName;  // URL to your installer
-  link.download = downloaded;  // Suggested file name
+function downloadInstaller(fileName, saveAs) {
+  if (isMobileDevice()) {
+    showToast();
+    return;
+  }
+  // Your actual download logic here, e.g.,
+  const link = document.createElement("a");
+  link.href = fileName;
+  link.download = saveAs || fileName;
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
+}
+
+function showToast() {
+  const toast = document.getElementById("toast");
+  toast.style.visibility = "visible";
+  toast.style.opacity = "1";
+
+  setTimeout(() => {
+    toast.style.opacity = "0";
+    // Wait for the transition to finish before hiding
+    setTimeout(() => {
+      toast.style.visibility = "hidden";
+    }, 500);
+  }, 3000); // Visible for 3 seconds
 }
 
 function animateSvgArrow() {
@@ -36,5 +55,9 @@ window.addEventListener("wheel", (e) => {
     animateSvgArrow();
   }
 });
+
+function isMobileDevice() {
+  return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
 
 

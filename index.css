@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&display=swap');
 
 * {
     margin: 0;
@@ -44,8 +45,8 @@ body {
 }
 
 .rho-text {
-    font-family: "Charm", cursive;
-    font-size: 35px;
+    font-family: "Edu SA Hand", cursive;
+    font-size: 30px;
     color: #f782ff;
 }
 
@@ -83,6 +84,10 @@ a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.47);
 }
 
+.download::before {
+    content: "Install ";
+}
+
 .download:hover {
     cursor: pointer;
 }
@@ -113,18 +118,11 @@ p.welcome-text {
     font-size: 2vw;
 }
 
-@keyframes fade-in {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .down-arrow {
     position: fixed;
     justify-content: center;
-    bottom: 20px;     
-    left: 50%;        
+    bottom: 20px;
+    left: 50%;
     /* transform: translateX(-50%);  */
     background-color: #f782ff;
     cursor: pointer;
@@ -139,39 +137,91 @@ p.welcome-text {
     margin: 0;
 }
 
-#arrow-svg{
+#arrow-svg {
     height: 10vh;
     width: 10vh;
     border-radius: 10vh;
 }
 
 #Body {
-  transition: transform 1s ease, opacity 1s ease;
+    transition: transform 1s ease, opacity 1s ease;
 }
 
 .slide-up {
-  transform: translateY(-100vh);
-  opacity: 0;
-  pointer-events: none; /* prevent interaction */
+    transform: translateY(-100vh);
+    opacity: 0;
+    pointer-events: none;
+    /* prevent interaction */
 }
 
 #next-page {
-  display: none;
+    display: none;
 }
 
 /* If you want a nicer transition later: */
 #next-page.show {
-  display: block;
-  animation: fade-in 1s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fade-in 1s ease;
 }
 
 @keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .rho-text {
+        display: none;
+    }
+
+    .left-content {
+        margin-left: 5px;
+    }
+
+    .right-content {
+        gap: 10px;
+        margin-right: 0px;
+    }
+
+    .download {
+        width: 30vw;
+    }
+
+    .download::before {
+        content: none;
+    }
+
+    #toast {
+        visibility: hidden;
+        min-width: 80vw;
+        background-color: #f44336;
+        color: white;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 100;
+        left: 50%;
+        bottom: 30px;
+        font-size: 17px;
+        transform: translateX(-50%);
+        border-radius: 10px;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
 }
