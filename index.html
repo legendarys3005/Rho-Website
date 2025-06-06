@@ -5,22 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="index.js"></script>
-    <title>Document</title>
+    <title>Rho - Time to upgrade</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
 </head>
 
 <body>
     <div class="header" id="header">
         <a href="https://legendarys3005.github.io/Rho-Website/">
             <div class="left-content header-sections">
-            <img src="assets/logo.png" alt="Rho" id="Rho-logo", class="header-element">
-            <H2 class="header-element rho-text" >Rho - Time to update</H2>
-        </div>
+                <img src="assets/logo.png" alt="Rho" id="Rho-logo" , class="header-element">
+                <H2 class="header-element rho-text">Rho - Time to upgrade</H2>
+            </div>
         </a>
         <div class="right-content header-sections">
-            <Button onclick="downloadInstaller('rho 0.0.1.exe', 'Rho (0.0.1).exe')", class="header-element download">Install Rho</Button>
+            <Button onclick="downloadInstaller('rho 0.0.1.exe', 'Rho (0.0.1).exe')" ,
+                class="header-element download">Install Rho</Button>
             <Button onclick="downloadInstaller()" , class="header-element download" disabled>Install RhoLab</Button>
+        </div>
+    </div>
+    <div>
+        <div id="Body" class="body">
+            <div class="welcome">
+                <div>
+                    <h1 class="welcome-text">Welcome to Rho</h1>
+                    <p class="welcome-text">It's time to upgrade</p>
+                </div>
+                <div class="down-arrow welcome-text" onclick="animateSvgArrow()">
+                    <svg id="arrow-svg" width="40" height="40" viewBox="0 0 20 20" style="cursor:pointer;">
+                        <line id="left-arm" x1="5" y1="6" x2="10" y2="15" stroke="#240540" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line id="right-arm" x1="15" y1="6" x2="10" y2="15" stroke="#240540" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="next-page">
+            <H1>
+                This is next page
+            </H1>
         </div>
     </div>
 </body>
