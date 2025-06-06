@@ -20,34 +20,37 @@
         </a>
         <div class="right-content header-sections">
             <Button onclick="downloadInstaller('rho 0.0.1.exe', 'Rho (0.0.1).exe')" ,
-                class="header-element download">Install Rho</Button>
-            <Button onclick="downloadInstaller()" , class="header-element download" disabled>Install RhoLab</Button>
+                class="header-element download">Rho</Button>
+            <Button onclick="downloadInstaller()" , class="header-element download" disabled>RhoLab</Button>
         </div>
     </div>
-    <div>
-        <div id="Body" class="body">
-            <div class="welcome">
-                <div>
-                    <h1 class="welcome-text">Welcome to Rho</h1>
-                    <p class="welcome-text">It's time to upgrade</p>
-                </div>
-                <div class="down-arrow welcome-text" onclick="animateSvgArrow()">
-                    <svg id="arrow-svg" width="40" height="40" viewBox="0 0 20 20" style="cursor:pointer;">
-                        <line id="left-arm" x1="5" y1="6" x2="10" y2="15" stroke="#240540" stroke-width="2"
-                            stroke-linecap="round" />
-                        <line id="right-arm" x1="15" y1="6" x2="10" y2="15" stroke="#240540" stroke-width="2"
-                            stroke-linecap="round" />
-                    </svg>
+    <div id="Body" class="body">
+        <div class="welcome">
+            <div>
+                <h1 class="welcome-text">Welcome to Rho</h1>
+                <p class="welcome-text">It's time to upgrade</p>
+            </div>
+            <div class="down-arrow welcome-text" onclick="animateSvgArrow()">
+                <svg id="arrow-svg" width="40" height="40" viewBox="0 0 20 20" style="cursor:pointer;">
+                    <line id="left-arm" x1="5" y1="6" x2="10" y2="15" stroke="#240540" stroke-width="2"
+                        stroke-linecap="round" />
+                    <line id="right-arm" x1="15" y1="6" x2="10" y2="15" stroke="#240540" stroke-width="2"
+                        stroke-linecap="round" />
+                </svg>
 
-                </div>
             </div>
         </div>
+    </div>
 
-        <div id="next-page">
+    <div id="next-page">
+        <div>
             <H1>
                 This is next page
             </H1>
         </div>
+    </div>
+    <div id="toast">
+        Downloads not allowed on mobile devices.
     </div>
 </body>
 
