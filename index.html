@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,20 @@
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
 </head>
+
 <body>
-    <H2>Rho - Time to update</H2>
-    <Button onclick="downloadInstaller('rho 0.0.1.exe')">Install Rho</Button>
-    <Button onclick="downloadInstaller()" disabled>Install RhoLab</Button>
+    <div class="header" id="header">
+        <a href="https://legendarys3005.github.io/Rho-Website/">
+            <div class="left-content header-sections">
+            <img src="assets/logo.png" alt="Rho" id="Rho-logo", class="header-element">
+            <H2 class="header-element rho-text" >Rho - Time to update</H2>
+        </div>
+        </a>
+        <div class="right-content header-sections">
+            <Button onclick="downloadInstaller('rho 0.0.1.exe')", class="header-element download">Install Rho</Button>
+            <Button onclick="downloadInstaller()" disabled, class="header-element download">Install RhoLab</Button>
+        </div>
+    </div>
 </body>
+
 </html>
