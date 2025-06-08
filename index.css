@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: linear-gradient(90deg, #4b0a86 0%, #79018c 50%, #f100e5 100%);
+    background-image: linear-gradient(90deg, #2a1a3d   0%, #6a0dad  50%, #1a1130   100%);
 }
 
 #header {
@@ -46,7 +46,7 @@ body {
 
 .rho-text {
     font-family: "Edu SA Hand", cursive;
-    font-size: 30px;
+    font-size: 32px;
     color: #f782ff;
 }
 
@@ -75,7 +75,7 @@ a {
 .download {
     border: none;
     height: 65px;
-    width: 150px;
+    width: 250px;
     border-radius: 40px;
     background-image: linear-gradient(90deg, #79018c 30px, #b200aa 100%);
     font-family: Arial, Helvetica, sans-serif;
@@ -83,6 +83,7 @@ a {
     font-weight: 600;
     color: #faadff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.47);
+    /* box-shadow: 0 4px 8px rgba(106, 13, 173, 0.4); */
 }
 
 .download::before {
@@ -106,6 +107,7 @@ a {
     text-align: center;
     opacity: 0;
     color: #f782ff;
+    text-shadow: 5px 6px 5px #000000;
     transform: translateY(30px);
     animation: fade-in 2s cubic-bezier(0.25, 1, 0.5, 1) 0.15s forwards;
 }
