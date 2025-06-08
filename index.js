@@ -1,15 +1,10 @@
-function downloadInstaller(fileName, saveAs) {
+function downloadInstaller(fileLink, saveAs) {
   if (isMobileDevice()) {
     showToast();
     return;
   }
   // Your actual download logic here, e.g.,
-  const link = document.createElement("a");
-  link.href = fileName;
-  link.download = saveAs || fileName;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+  window.open(fileLink, "_blank")
 }
 
 function showToast() {
