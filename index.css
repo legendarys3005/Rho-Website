@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: linear-gradient(90deg, #2a1a3d   0%, #6a0dad  50%, #1a1130   100%);
+    background-image: linear-gradient(90deg, #2a1a3d 0%, #6a0dad 50%, #1a1130 100%);
 }
 
 #header {
@@ -81,7 +81,7 @@ a {
     font-family: "Quicksand", sans-serif;
     font-size: 15px;
     font-weight: 600;
-    color: #faadff;
+    color: #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.47);
     /* box-shadow: 0 4px 8px rgba(106, 13, 173, 0.4); */
 }
@@ -125,8 +125,8 @@ p.welcome-text {
     position: fixed;
     justify-content: center;
     bottom: 20px;
-    left: 50%;
-    /* transform: translateX(-50%);  */
+    /* left: 50%; */
+    transform: translateX(-50%);
     background-color: #f782ff;
     cursor: pointer;
     z-index: 20;
@@ -159,6 +159,7 @@ p.welcome-text {
 
 #next-page {
     display: none;
+    padding: 40px;
 }
 
 /* If you want a nicer transition later: */
@@ -200,6 +201,100 @@ p.welcome-text {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
+
+.introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 250px;
+    padding: 2rem;
+}
+
+.intro {
+    color: #faadff;
+    font-family: "Source Code Pro", monospace;
+}
+
+.example {
+    flex: 1;
+    min-width: 30vw;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 1rem;
+    padding: 1.2em;
+    margin: 2em auto;
+    border-radius: 10px;
+    overflow-x: auto;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
+
+    * {
+        white-space: pre-wrap;
+        user-select: text !important;
+    }
+}
+
+#copy {
+    display: block;
+    height: 25px;
+}
+
+#copy:hover {
+    cursor: pointer;
+}
+
+.directive {
+    color: #9F31EF;
+}
+
+.str {
+    color: coral;
+}
+
+.fragment {
+    color: cyan;
+}
+
+.fields {
+    color: cornflowerblue;
+}
+
+.key {
+    color: #f782ff;
+}
+
+.value {
+    color: #faadff;
+}
+
+.comment{
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* 
+.tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+.tab-content.active {
+  display: block;
+}
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+}
+.tab-btn {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.tab-btn.active {
+  background-color: #333;
+  color: white;
+} */
 
 
 

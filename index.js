@@ -36,12 +36,13 @@ function animateSvgArrow() {
 }
 
 // On page load check localStorage
-// window.addEventListener('load', () => {
-// if (localStorage.getItem('pageHidden') === 'true') {
-// const body = document.getElementById('Body');
-// body.classList.add('slide-up');
-// }
-// });
+window.addEventListener('load', () => {
+  if (localStorage.getItem('pageHidden') === 'true') {
+    const body = document.getElementById('Body');
+    body.classList.add('slide-up');
+    animateSvgArrow();
+  }
+});
 
 
 window.addEventListener("wheel", (e) => {
@@ -54,5 +55,32 @@ window.addEventListener("wheel", (e) => {
 function isMobileDevice() {
   return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
+
+function openTab(evt, tabId) {
+  // Hide all contents
+  document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+  
+  // Remove active from all buttons
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  
+  // Show selected tab and set button active
+  document.getElementById(tabId).classList.add('active');
+  evt.currentTarget.classList.add('active');
+}
+
+document.getElementById("copy").addEventListener("click", function () {
+    const codeElement = document.getElementById("rho-code");
+    const tempElement = document.createElement("textarea");
+
+    // Get only text content (no HTML tags)
+    tempElement.value = codeElement.textContent;
+    document.body.appendChild(tempElement);
+    tempElement.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempElement);
+
+    // Optional: feedback
+    alert("Code copied to clipboard!");
+});
 
 
