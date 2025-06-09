@@ -206,7 +206,7 @@ p.welcome-text {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    gap: 250px;
+    gap: 200px;
     padding: 2rem;
 }
 

@@ -36,13 +36,13 @@ function animateSvgArrow() {
 }
 
 // On page load check localStorage
-window.addEventListener('load', () => {
-  if (localStorage.getItem('pageHidden') === 'true') {
-    const body = document.getElementById('Body');
-    body.classList.add('slide-up');
-    animateSvgArrow();
-  }
-});
+// window.addEventListener('load', () => {
+//   if (localStorage.getItem('pageHidden') === 'true') {
+//     const body = document.getElementById('Body');
+//     body.classList.add('slide-up');
+//   }
+//   animateSvgArrow();
+// });
 
 
 window.addEventListener("wheel", (e) => {
