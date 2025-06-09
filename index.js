@@ -68,19 +68,23 @@ function openTab(evt, tabId) {
   evt.currentTarget.classList.add('active');
 }
 
-document.getElementById("copy").addEventListener("click", function () {
-    const codeElement = document.getElementById("rho-code");
-    const tempElement = document.createElement("textarea");
+document.addEventListener("DOMContentLoaded", function () {
+  const copyBtn = document.getElementById("copy");
+  const codeElement = document.getElementById("rho-code");
 
-    // Get only text content (no HTML tags)
-    tempElement.value = codeElement.textContent;
-    document.body.appendChild(tempElement);
-    tempElement.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempElement);
+  if (copyBtn && codeElement) {
+    copyBtn.addEventListener("click", function () {
+      const codeText = codeElement.textContent;
 
-    // Optional: feedback
-    alert("Code copied to clipboard!");
+      navigator.clipboard.writeText(codeText)
+        .then(() => {
+          alert("Code copied to clipboard!");
+        })
+        .catch(err => {
+          console.error("Failed to copy text: ", err);
+        });
+    });
+  }
 });
 
 
